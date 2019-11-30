@@ -69,7 +69,7 @@ def run(songs)
     elsif command == "list"
       list(songs)
     elsif command == "play"
-      play
+      play(songs)
     elsif command == "exit"
       exit_jukebox
       break
