@@ -52,7 +52,7 @@ def list(songs)
   songs.each_with_index do |x, y|
     puts "#{y+1}. #{x}"
   end
-  end 
+  
 end
 
 
