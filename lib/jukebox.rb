@@ -28,11 +28,7 @@ def help
   puts "- exit : exits this program"
 end
 
-def list(songs)
-  songs.each_with_index do |song, index|
-    puts "#{index+1}. #{song}"
-  end
-end
+
 
 def play(songs)
   puts "Please enter a song name or number:"
@@ -52,13 +48,29 @@ def play(songs)
   end
 end
 
+def list(songs)
+  puts songs.each_with_index
+end
+
+
 def exit_jukebox
   puts "Goodbye"
 end
 
 
 def run(songs)
-
-
-
+  while true
+  puts "Please enter a command:"
+  command = gets.strip
+    if command == "help"
+      help
+    elsif command == "list"
+      list
+    elsif command == "play"
+      play
+    elsif command == "exit"
+      exit_jukebox
+      break
+    end
+  end
 end
